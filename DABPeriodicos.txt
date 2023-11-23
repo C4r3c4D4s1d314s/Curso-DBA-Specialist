@@ -1,0 +1,12 @@
+CREATE DATABASE FirstExample
+SHOW DATABASES
+USE FirstExample
+CREATE TABLE periodicos (id INT AUTO_INCREMENT PRIMARY KEY, nome_periodico VARCHAR(20), issn INT UNIQUE, id_editora INT);
+CREATE TABLE editoras (id INT AUTO_INCREMENT PRIMARY KEY, nome_editora VARCHAR(20) UNIQUE, pais VARCHAR(5));
+ALTER TABLE periodicos ADD CONSTRAINT fk_editoras_periodicos FOREIGN KEY (id_editora) REFERENCES editoras(id);
+
+INSERT INTO editoras(nome_editora, pais) VALUES (´IEEE','EUA'), ('DataScienceMagazine','EUA');
+INSERT INTO editoras(nome_editora, pais) VALUES (´IEEE_EU','EU');
+
+INSERT INTO periodicos(nome_periodico, issn, is_editora) VALUES (´Special Issue','12345678', '1');
+INSERT INTO periodicos(nome_periodico, issn, is_editora) VALUES (´Special Issue 2','13245678', '3');

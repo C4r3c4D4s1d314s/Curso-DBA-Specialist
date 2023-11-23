@@ -1,0 +1,7 @@
+CREATE DATABASE Artigos
+SHOW DATABASES
+USE Artigos
+CREATE TABLE artigos (id INT AUTO_INCREMENT PRIMARY KEY, nome_artigo VARCHAR(120), id_autor INT);
+CREATE TABLE autores (id INT AUTO_INCREMENT PRIMARY KEY, nome_autor VARCHAR(120), id_autor INT);
+ALTER TABLE artigos ADD CONSTRAINT fk_autores_artigos FOREIGN KEY (id_autor) REFERENCES autores(id);
+
