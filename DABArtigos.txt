@@ -1,7 +1,230 @@
-CREATE DATABASE Artigos
-SHOW DATABASES
-USE Artigos
-CREATE TABLE artigos (id INT AUTO_INCREMENT PRIMARY KEY, nome_artigo VARCHAR(120), id_autor INT);
-CREATE TABLE autores (id INT AUTO_INCREMENT PRIMARY KEY, nome_autor VARCHAR(120), id_autor INT);
-ALTER TABLE artigos ADD CONSTRAINT fk_autores_artigos FOREIGN KEY (id_autor) REFERENCES autores(id);
+
+
+while(exibirMenu)
+{
+Console.Clear();
+Console.WriteLine("Digite a sua opção");
+Console.WriteLine("1 - Cadastrar cliente");
+Console.WriteLine("2 - Buscar cliente");
+Console.WriteLine("3 - Apagar cliente");
+Console.WriteLine("4 - Encerrar");
+
+opcao = Console.ReadLine();
+
+switch(opcao)
+{ 
+	case "1":
+		Console.WriteLine("Cadastro do cliente");
+		break;
+	case "2":
+		Console.WriteLine("Buscar cliente");
+		break;
+	case "3":
+		Console.WriteLine("Apagar cliente");
+		break;
+	case "4":
+		Console.WriteLine("Encerrar");
+		exibirMenu = false;
+		//Environment.Exit(0);
+		break;
+	default:
+		Console.WriteLine("opção inválida");
+		break;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+string opcao;
+
+while(true)
+{
+Console.WriteLine("Digite a sua opção");
+Console.WriteLine("1 - Cadastrar cliente");
+Console.WriteLine("2 - Buscar cliente");
+Console.WriteLine("3 - Apagar cliente");
+Console.WriteLine("4 - Encerrar");
+
+opcao = Console.ReadLine();
+
+switch(opcao)
+{ 
+	case "1":
+		Console.WriteLine("Cadastro do cliente");
+		break;
+	case "2":
+		Console.WriteLine("Buscar cliente");
+		break;
+	case "3":
+		Console.WriteLine("Apagar cliente");
+		break;
+	case "4":
+		Console.WriteLine("Encerrar");
+		Environment.Exit(0);
+		break;
+	default:
+		Console.WriteLine("opção inválida");
+		break;
+}
+}
+
+
+
+
+//using ExemploFundamentos.Models;
+
+
+int soma = 0;
+int numero = 0;
+
+do
+{
+    Console.WriteLine("Digite um número (0 para parar)");
+    numero = Convert.ToInt32(Console.ReadLine());
+
+    soma += numero;
+
+} while(numero != 0);
+
+Console.WriteLine($"Total da soma dos números digitados é: {soma}");
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ExemplosFundamentos
+{
+ public class Calculadora
+    {
+        public void Somar(int x, int y)
+        {  
+            Console.WriteLine($"{x} + {y} = {x+y}");
+
+        }
+
+        public void Subtrair(int x, int y)
+        {  
+            Console.WriteLine($"{x} - {y} = {x-y}");
+
+        }
+
+        public void Multiplicar(int x, int y)
+        {  
+            Console.WriteLine($"{x} x {y} = {x*y}");
+
+        }
+
+        public void Dividir(int x, int y)
+        {  
+            Console.WriteLine($"{x} / {y} = {x/y}");
+
+        }
+
+        public void Potencia(int x, int y)
+        {
+            double pot = Math.Pow  (x,y);
+            Console.WriteLine($"{x} ^ {y} = {pot}");
+
+        }
+        // public void Seno(double angulo)
+        // {
+        //     double radiano = angulo * Math.pi / 180;
+        //     double seno = Math.sin(radiano);
+        //     console.WriteLine($"Seno de {angulo}º = {seno}");
+        // }
+
+        // public void Coseno(double angulo)
+        // {
+        //     double radiano = angulo * Math.pi / 180;
+        //     double coseno = Math.coseno(radiano);
+        //     console.WriteLine($"Coseno de {angulo}º = {coseno}");
+        // }
+        
+        // public void Tangente(double angulo)
+        // {
+        //     double radiano = angulo * Math.pi / 180;
+        //     double tangente = Math.Tan(radiano);
+        //     console.WriteLine($"Tangente de {angulo}º = {tangente}");
+        // }
+
+    }
+}
+
+
+
+
+public class Pessoa
+//     {
+//         public string Nome { get; set; }
+//         public int Idade { get; set; }
+
+//         public void Apresentar()
+//             {
+
+//                 Console.WriteLine($"Olá, meu nome é {Nome}, e tenho {Idade} ano");
+//             }
+//     }
+
+
+
+
+
+
+
+
+using ExemplosFundamentos;
+
+Calculadora calc = new Calculadora();
+
+// calc.Somar(10,30);
+// calc.Subtrair(10,50);
+// calc.Multiplicar(15,45);
+// calc.Dividir(2,2);
+calc.Seno(30);
+calc.Console(30);
+calc.Tangente(30);
+
 
